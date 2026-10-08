@@ -38,13 +38,8 @@ export class NotificationService implements INotificationService {
     private readonly userDeviceService: IUserDeviceService
   ) {}
 
-  async sendMail(options: MailSendOptions) {
-    try {
-      this.appLogger.log(`[sendMail] [success] data= ${JSON.stringify(options)}`)
-      await this.mailService.sendMail(options)
-    } catch (error) {
-      this.appLogger.error(`[sendMail] [failed] error = ${JSON.stringify(error.message)}`)
-    }
+  async sendMail(_options: MailSendOptions): Promise<void> {
+    return
   }
 
   public async sendFirebaseCloudMessaging(sendNotificationDto: SendNotificationDto) {
@@ -81,7 +76,9 @@ export class NotificationService implements INotificationService {
   }
 
   public async sendTopicFirebaseCloudMessaging(sendTopicNotificationDto: SendTopicNotificationDto) {
-    this.appLogger.debug(`[sendTopicFirebaseCloudMessaging]: sendTopicNotificationDto=${JSON.stringify(sendTopicNotificationDto)}`)
+    this.appLogger.debug(
+      `[sendTopicFirebaseCloudMessaging]: sendTopicNotificationDto=${JSON.stringify(sendTopicNotificationDto)}`
+    )
     try {
       const { title, body, data, topic } = sendTopicNotificationDto
 
