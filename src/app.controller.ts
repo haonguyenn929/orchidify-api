@@ -25,7 +25,7 @@ export class AppController {
   // async cert() {
   //   const data = {
   //     learnerName: 'Vo Minh Tien',
-  //     courseTitle: 'Khóa học chăm học lan rừng, lan công nghiệp',
+  //     courseTitle: 'Wild and Industrial Orchid Care Course',
   //     dateCompleted: 'July, 23 2021',
   //     certificateCode: 'BS182903344',
   //     instructorName: 'Nguyen Ngoc Anh',

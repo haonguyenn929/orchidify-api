@@ -33,7 +33,7 @@ export declare class QueryAvailableGardenDto {
     slotNumbers: SlotNumber[];
     instructorId: Types.ObjectId;
 }
-declare const AvailableGardenListItemResponse_base: import("@nestjs/common").Type<Pick<BaseGardenDto, "name" | "_id">>;
+declare const AvailableGardenListItemResponse_base: import("@nestjs/common").Type<Pick<BaseGardenDto, "_id" | "name">>;
 export declare class AvailableGardenListItemResponse extends AvailableGardenListItemResponse_base {
 }
 declare class AvailableGardenListResponse {

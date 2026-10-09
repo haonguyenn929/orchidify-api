@@ -54,7 +54,7 @@ export class BaseCourseDto {
   @IsEnum(CourseLevel)
   level: CourseLevel
 
-  @ApiProperty({ type: [String], example: ['Tách chiết'] })
+  @ApiProperty({ type: [String], example: ['Propagation'] })
   @IsNotEmpty()
   @IsArray()
   @ArrayMinSize(1)

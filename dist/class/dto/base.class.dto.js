@@ -64,7 +64,7 @@ __decorate([
     __metadata("design:type", String)
 ], BaseClassDto.prototype, "level", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ type: [String], example: ['Tách chiết'] }),
+    (0, swagger_1.ApiProperty)({ type: [String], example: ['Propagation'] }),
     (0, class_validator_1.IsNotEmpty)(),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.ArrayMinSize)(1),

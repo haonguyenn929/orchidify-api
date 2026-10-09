@@ -161,8 +161,8 @@ export class MomoPaymentStrategy implements IPaymentStrategy {
         const isPaymentSuccess = get(webhookData, 'resultCode') === MomoResultCode.SUCCESS
         if (isPaymentSuccess) {
           // {"partnerCode":"MOMO","orderId":"2350841914636077","requestId":"2350841914636077","amount":500000,
-          // "orderInfo":"Orchidify - Thanh toán đơn hàng #2350841914636077","orderType":"momo_wallet","transId":4193767509,
-          // "resultCode":0,"message":"Thành công.","payType":"credit","responseTime":1729168176653,"extraData":"",
+          // "orderInfo":"Orchidify - Payment for order #2350841914636077","orderType":"momo_wallet","transId":4193767509,
+          // "resultCode":0,"message":"Successful.","payType":"credit","responseTime":1729168176653,"extraData":"",
           // "signature":"7c72c91be19b2af1a3274eb489e48a121d7e1dfaf6b486fc171446220dec577b"}
           this.logger.log('processWebhook: payment SUCCESS')
 
@@ -237,9 +237,9 @@ export class MomoPaymentStrategy implements IPaymentStrategy {
           // 5. Send notification to staff
         } else {
           // {"partnerCode":"MOMO","orderId":"2597751498479017","requestId":"2597751498479017",
-          // "amount":500000,"orderInfo":"Orchidify - Thanh toán đơn hàng #2597751498479017",
+          // "amount":500000,"orderInfo":"Orchidify - Payment for order #2597751498479017",
           // "orderType":"momo_wallet","transId":4193843003,"resultCode":1002,
-          // "message":"Giao dịch bị từ chối do nhà phát hành tài khoản thanh toán.","payType":"credit",
+          // "message":"Transaction was declined by issuer.","payType":"credit",
           // "responseTime":1729170439150,"extraData":"{\"classId\":\"670fe48f8c7ef08132529f7f\",\"learnerId\":\"66dafb2a05fbc3343d6bfc83\"}",
           // "signature":"d7625350337e76ac93db68e7c8182cdf360cb01803580157ec61af0f8e506f03"}
           this.logger.log('processWebhook: payment FAILED')
@@ -310,7 +310,7 @@ export class MomoPaymentStrategy implements IPaymentStrategy {
       ])
       this.notificationService.sendMail({
         to: learner?.email,
-        subject: `[Orchidify] Xác nhận đăng ký lớp học ${courseClass?.title} thành công`,
+        subject: `[Orchidify] Successfully registered for class ${courseClass?.title}`,
         template: 'learner/enroll-class',
         context: {
           classTitle: courseClass?.title,

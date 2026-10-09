@@ -8,7 +8,7 @@ export declare class TransactionController {
     list(pagination: PaginationParams, queryTransactionDto: QueryTransactionDto): Promise<any>;
     getDetail(staffId: string): Promise<{
         payment: Partial<import("../schemas/transaction.schema").Payment>;
-        payout: Pick<import("../schemas/transaction.schema").Payout, "status" | "id" | "createdAt" | "code" | "histories">;
+        payout: Pick<import("../schemas/transaction.schema").Payout, "status" | "createdAt" | "id" | "code" | "histories">;
         _id: string;
         type: import("@src/transaction/contracts/constant").TransactionType;
         paymentMethod: import("@src/transaction/contracts/constant").PaymentMethod;

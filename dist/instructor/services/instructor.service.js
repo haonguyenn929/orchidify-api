@@ -33,7 +33,7 @@ let InstructorService = class InstructorService {
         const instructor = await this.instructorRepository.create(createInstructorDto, options);
         this.notificationService.sendMail({
             to: instructor.email,
-            subject: `[Orchidify] Thông tin đăng nhập`,
+            subject: `[Orchidify] Login Credentials`,
             template: 'instructor/add-instructor',
             context: {
                 email: instructor.email,

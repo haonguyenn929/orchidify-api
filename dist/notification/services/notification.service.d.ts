@@ -24,7 +24,7 @@ export declare class NotificationService implements INotificationService {
     private readonly userDeviceService;
     private readonly appLogger;
     constructor(mailService: MailerService, firebaseFirestoreService: IFirebaseFirestoreService, firebaseMessagingService: IFirebaseMessagingService, userDeviceService: IUserDeviceService);
-    sendMail(options: MailSendOptions): Promise<void>;
+    sendMail(_options: MailSendOptions): Promise<void>;
     sendFirebaseCloudMessaging(sendNotificationDto: SendNotificationDto): Promise<{
         success: boolean;
         response?: BatchResponse;

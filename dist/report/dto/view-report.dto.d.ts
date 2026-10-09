@@ -6,7 +6,7 @@ export declare class QueryReportByMonthDto {
 export declare class QueryReportByWeekDto {
     date: Date;
 }
-declare const ReportTotalSummaryReportListItemResponse_base: import("@nestjs/common").Type<Pick<BaseReportDto, "data" | "type" | "_id">>;
+declare const ReportTotalSummaryReportListItemResponse_base: import("@nestjs/common").Type<Pick<BaseReportDto, "data" | "_id" | "type">>;
 declare class ReportTotalSummaryReportListItemResponse extends ReportTotalSummaryReportListItemResponse_base {
 }
 declare class ReportTotalSummaryListResponse {

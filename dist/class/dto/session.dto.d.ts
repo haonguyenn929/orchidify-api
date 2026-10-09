@@ -11,7 +11,7 @@ export declare class BaseSessionDto {
     media: SessionMediaDto[];
     assignments: BaseAssignmentDto[];
 }
-declare const CreateSessionDto_base: import("@nestjs/common").Type<Pick<BaseSessionDto, "title" | "description">>;
+declare const CreateSessionDto_base: import("@nestjs/common").Type<Pick<BaseSessionDto, "description" | "title">>;
 export declare class CreateSessionDto extends CreateSessionDto_base {
     media: BaseMediaDto[];
     assignments: CreateAssignmentDto[];

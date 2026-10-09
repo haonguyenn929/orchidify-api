@@ -6,7 +6,7 @@ export declare class QueryGardenManagerDto {
     email: string;
     status: GardenManagerStatus[];
 }
-declare const GardenManagerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseGardenManagerDto, "status" | "name" | "createdAt" | "updatedAt" | "_id" | "email" | "idCardPhoto">>;
+declare const GardenManagerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseGardenManagerDto, "status" | "createdAt" | "updatedAt" | "_id" | "name" | "email" | "idCardPhoto">>;
 declare class GardenManagerDetailResponse extends GardenManagerDetailResponse_base {
     gardens: BaseGardenDto[];
 }

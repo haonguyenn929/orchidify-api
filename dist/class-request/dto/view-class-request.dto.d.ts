@@ -33,7 +33,7 @@ export declare class QueryClassRequestDto {
     status: ClassRequestStatus[];
     createdBy: string;
 }
-declare const InstructorViewClassRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassRequestDto, "metadata" | "status" | "type" | "createdAt" | "description" | "updatedAt" | "_id" | "rejectReason" | "courseId" | "classId" | "createdBy">>;
+declare const InstructorViewClassRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassRequestDto, "metadata" | "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "rejectReason" | "courseId" | "classId" | "createdBy">>;
 declare class InstructorViewClassRequestListItemResponse extends InstructorViewClassRequestListItemResponse_base {
 }
 declare const InstructorViewClassRequestListResponse_base: import("@nestjs/common").Type<{
@@ -56,7 +56,7 @@ declare const InstructorViewClassRequestListDataResponse_base: import("@nestjs/c
 }>;
 export declare class InstructorViewClassRequestListDataResponse extends InstructorViewClassRequestListDataResponse_base {
 }
-declare const InstructorViewClassRequestDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassRequestDto, "metadata" | "status" | "type" | "createdAt" | "description" | "updatedAt" | "_id" | "histories" | "rejectReason" | "courseId" | "classId" | "createdBy">>;
+declare const InstructorViewClassRequestDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassRequestDto, "metadata" | "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "histories" | "rejectReason" | "courseId" | "classId" | "createdBy">>;
 declare class InstructorViewClassRequestDetailResponse extends InstructorViewClassRequestDetailResponse_base {
     class: BaseClassDto;
 }
@@ -65,7 +65,7 @@ declare const InstructorViewClassRequestDetailDataResponse_base: import("@nestjs
 }>;
 export declare class InstructorViewClassRequestDetailDataResponse extends InstructorViewClassRequestDetailDataResponse_base {
 }
-declare const StaffViewClassRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassRequestDto, "metadata" | "status" | "type" | "createdAt" | "description" | "updatedAt" | "_id" | "rejectReason" | "courseId" | "classId" | "createdBy">>;
+declare const StaffViewClassRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassRequestDto, "metadata" | "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "rejectReason" | "courseId" | "classId" | "createdBy">>;
 declare class StaffViewClassRequestListItemResponse extends StaffViewClassRequestListItemResponse_base {
     createdBy: Types.ObjectId | BaseInstructorDto;
 }

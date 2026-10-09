@@ -33,7 +33,7 @@ let GardenManagerService = class GardenManagerService {
         const gardenManager = await this.gardenManagerRepository.create(createGardenManagerDto, options);
         this.notificationService.sendMail({
             to: gardenManager.email,
-            subject: `[Orchidify] Thông tin đăng nhập`,
+            subject: `[Orchidify] Login Credentials`,
             template: 'management/add-garden-manager',
             context: {
                 email: gardenManager.email,

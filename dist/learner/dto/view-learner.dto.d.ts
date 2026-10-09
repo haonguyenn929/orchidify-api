@@ -5,7 +5,7 @@ export declare class QueryLearnerDto {
     email: string;
     status: LearnerStatus[];
 }
-declare const LearnerProfileResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "status" | "name" | "avatar" | "_id" | "email" | "dateOfBirth" | "phone">>;
+declare const LearnerProfileResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "status" | "_id" | "name" | "email" | "avatar" | "dateOfBirth" | "phone">>;
 declare class LearnerProfileResponse extends LearnerProfileResponse_base {
 }
 declare const LearnerProfileDataResponse_base: import("@nestjs/common").Type<{
@@ -13,7 +13,7 @@ declare const LearnerProfileDataResponse_base: import("@nestjs/common").Type<{
 }>;
 export declare class LearnerProfileDataResponse extends LearnerProfileDataResponse_base {
 }
-declare const LearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "status" | "name" | "avatar" | "createdAt" | "updatedAt" | "_id" | "email" | "dateOfBirth" | "phone">>;
+declare const LearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "status" | "createdAt" | "updatedAt" | "_id" | "name" | "email" | "avatar" | "dateOfBirth" | "phone">>;
 export declare class LearnerDetailResponse extends LearnerDetailResponse_base {
 }
 declare const LearnerDetailDataResponse_base: import("@nestjs/common").Type<{
@@ -21,7 +21,7 @@ declare const LearnerDetailDataResponse_base: import("@nestjs/common").Type<{
 }>;
 export declare class LearnerDetailDataResponse extends LearnerDetailDataResponse_base {
 }
-declare const LearnerListItemResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "status" | "name" | "avatar" | "createdAt" | "updatedAt" | "_id" | "email" | "dateOfBirth" | "phone">>;
+declare const LearnerListItemResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "status" | "createdAt" | "updatedAt" | "_id" | "name" | "email" | "avatar" | "dateOfBirth" | "phone">>;
 declare class LearnerListItemResponse extends LearnerListItemResponse_base {
 }
 declare const LearnerListResponse_base: import("@nestjs/common").Type<{

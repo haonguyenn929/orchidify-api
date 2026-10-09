@@ -13,6 +13,6 @@ describe('AppController (e2e)', () => {
   it('/welcome (GET)', async () => {
     const { body, status } = await request(global.app.getHttpServer()).get('/welcome').expect(200)
     expect(status).toEqual(200)
-    expect(body).toEqual({ data: 'Xin chào!' })
+    expect(body).toEqual({ data: 'Welcome!' })
   })
 })

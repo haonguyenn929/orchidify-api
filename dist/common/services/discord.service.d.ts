@@ -1,10 +1,6 @@
-import { ConfigService } from '@nestjs/config';
-import { APIEmbedField, WebhookClient } from 'discord.js';
+import type { APIEmbedField } from 'discord.js';
 export declare class DiscordService {
-    private readonly configService;
-    webhookClient: WebhookClient;
-    constructor(configService: ConfigService);
-    sendMessage({ content, fields }: {
+    sendMessage(_message: {
         content?: string;
         fields?: APIEmbedField[];
     }): Promise<void>;

@@ -33,7 +33,7 @@ export declare class QueryGardenDto {
     status: GardenStatus[];
     gardenManagerId: Types.ObjectId;
 }
-declare const GardenListItemResponse_base: import("@nestjs/common").Type<Pick<BaseGardenDto, "status" | "name" | "createdAt" | "description" | "updatedAt" | "_id" | "gardenManagerId" | "address" | "addressLink" | "maxClass">>;
+declare const GardenListItemResponse_base: import("@nestjs/common").Type<Pick<BaseGardenDto, "status" | "createdAt" | "updatedAt" | "_id" | "name" | "description" | "gardenManagerId" | "address" | "addressLink" | "maxClass">>;
 declare class GardenListItemResponse extends GardenListItemResponse_base {
     gardenManager: BaseGardenManagerDto;
 }
@@ -57,7 +57,7 @@ declare const GardenListDataResponse_base: import("@nestjs/common").Type<{
 }>;
 export declare class GardenListDataResponse extends GardenListDataResponse_base {
 }
-declare const GardenDetailResponse_base: import("@nestjs/common").Type<Pick<BaseGardenDto, "status" | "name" | "createdAt" | "description" | "updatedAt" | "_id" | "gardenManagerId" | "address" | "addressLink" | "images" | "maxClass">>;
+declare const GardenDetailResponse_base: import("@nestjs/common").Type<Pick<BaseGardenDto, "status" | "createdAt" | "updatedAt" | "_id" | "name" | "description" | "gardenManagerId" | "address" | "addressLink" | "images" | "maxClass">>;
 declare class GardenDetailResponse extends GardenDetailResponse_base {
     gardenManager: BaseGardenManagerDto;
 }

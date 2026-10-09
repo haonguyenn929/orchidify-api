@@ -11,7 +11,7 @@ export class AppService {
 
   getI18nText(): string {
     return this.i18nService.t('auth.welcome', {
-      lang: 'vn'
+      lang: 'en'
     })
   }
 }

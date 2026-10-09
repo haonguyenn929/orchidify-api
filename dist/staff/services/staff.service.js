@@ -40,7 +40,7 @@ let StaffService = class StaffService {
         const staff = await this.staffRepository.create(createStaffDto, options);
         this.notificationService.sendMail({
             to: staff.email,
-            subject: `[Orchidify] Thông tin đăng nhập`,
+            subject: `[Orchidify] Login Credentials`,
             template: 'management/add-staff',
             context: {
                 email: staff.email,

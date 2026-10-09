@@ -214,7 +214,7 @@ let MomoPaymentStrategy = MomoPaymentStrategy_1 = class MomoPaymentStrategy {
             ]);
             this.notificationService.sendMail({
                 to: learner?.email,
-                subject: `[Orchidify] Xác nhận đăng ký lớp học ${courseClass?.title} thành công`,
+                subject: `[Orchidify] Successfully registered for class ${courseClass?.title}`,
                 template: 'learner/enroll-class',
                 context: {
                     classTitle: courseClass?.title,

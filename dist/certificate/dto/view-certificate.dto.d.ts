@@ -2,7 +2,7 @@ import { BaseCertificateDto } from './base.certificate.dto';
 export declare class QueryCertificateDto {
     ownerId: string;
 }
-declare const CertificateDetailResponse_base: import("@nestjs/common").Type<Pick<BaseCertificateDto, "name" | "createdAt" | "url" | "ownerId" | "updatedAt" | "_id" | "code">>;
+declare const CertificateDetailResponse_base: import("@nestjs/common").Type<Pick<BaseCertificateDto, "createdAt" | "updatedAt" | "_id" | "name" | "url" | "ownerId" | "code">>;
 declare class CertificateDetailResponse extends CertificateDetailResponse_base {
 }
 declare const CertificateListResponse_base: import("@nestjs/common").Type<{

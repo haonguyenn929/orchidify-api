@@ -141,7 +141,7 @@ let RecruitmentService = RecruitmentService_1 = class RecruitmentService {
         }, { new: true });
         this.notificationService.sendMail({
             to: recruitment?.applicationInfo?.email,
-            subject: `[Orchidify] Mời phỏng vấn vị trí Giảng viên - Orchidify`,
+            subject: `[Orchidify] Invitation to Instructor Interview - Orchidify`,
             template: 'viewer/process-recruitment-application',
             context: {
                 platform: 'Google Meet',
@@ -176,7 +176,7 @@ let RecruitmentService = RecruitmentService_1 = class RecruitmentService {
         });
         this.notificationService.sendMail({
             to: recruitment?.applicationInfo?.email,
-            subject: `[Orchidify] Chúc mừng bạn đã trở thành một phần của Orchidify`,
+            subject: `[Orchidify] Congratulations on becoming a part of Orchidify`,
             template: 'viewer/process-recruitment-interview',
             context: {
                 name: recruitment?.applicationInfo?.name
@@ -215,7 +215,7 @@ let RecruitmentService = RecruitmentService_1 = class RecruitmentService {
             : 'viewer/reject-recruitment-interview.ejs';
         this.notificationService.sendMail({
             to: recruitment?.applicationInfo?.email,
-            subject: `[Orchidify] Thông báo về kết quả ứng tuyển giảng viên`,
+            subject: `[Orchidify] Notification of Instructor Application Result`,
             template: mailTemplate,
             context: {
                 name: recruitment?.applicationInfo?.name

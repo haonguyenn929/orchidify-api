@@ -639,11 +639,11 @@ export class ClassRequestService implements IClassRequestService {
 
     // send notification to instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: 'Yêu cầu lớp học của bạn đã được duyệt',
+      title: 'Your class request has been approved',
       body:
         classRequest.type === ClassRequestType.PUBLISH_CLASS
-          ? 'Lớp học đã được mở. Bấm để xem chi tiết.'
-          : 'Lớp học đã hủy. Bấm để xem chi tiết',
+          ? 'Class has been published. Click to view details.'
+          : 'Class has been cancelled. Click to view details.',
       receiverIds: [classRequest.createdBy.toString()],
       data: {
         type: FCMNotificationDataType.CLASS_REQUEST,
@@ -759,11 +759,11 @@ export class ClassRequestService implements IClassRequestService {
 
     // send notification to instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: 'Yêu cầu lớp học của bạn đã bị từ chối',
+      title: 'Your class request has been rejected',
       body:
         classRequest.type === ClassRequestType.PUBLISH_CLASS
-          ? 'Yêu cầu mở lớp chưa phù hợp. Bấm để xem chi tiết.'
-          : 'Yêu cầu hủy lớp chưa phù hợp. Bấm để xem chi tiết',
+          ? 'Class publication request was not approved. Click to view details.'
+          : 'Class cancellation request was not approved. Click to view details.',
       receiverIds: [classRequest.createdBy.toString()],
       data: {
         type: FCMNotificationDataType.CLASS_REQUEST,
@@ -836,8 +836,8 @@ export class ClassRequestService implements IClassRequestService {
     }
     // send notification to instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: 'Yêu cầu lớp học của bạn đã hết hạn',
-      body: 'Yêu cầu mở lớp đã hết hạn. Bấm để xem chi tiết.',
+      title: 'Your class request has expired',
+      body: 'Class publication request has expired. Click to view details.',
       receiverIds: [classRequest.createdBy.toString()],
       data: {
         type: FCMNotificationDataType.CLASS_REQUEST,
@@ -897,8 +897,8 @@ export class ClassRequestService implements IClassRequestService {
     }
     // send notification to instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: 'Yêu cầu lớp học của bạn đã hết hạn',
-      body: 'Yêu cầu hủy lớp đã hết hạn. Bấm để xem chi tiết.',
+      title: 'Your class request has expired',
+      body: 'Class cancellation request has expired. Click to view details.',
       receiverIds: [classRequest.createdBy.toString()],
       data: {
         type: FCMNotificationDataType.CLASS_REQUEST,
@@ -1002,11 +1002,11 @@ export class ClassRequestService implements IClassRequestService {
     })
     const staffIds = staffs.map((staff) => staff._id.toString())
     await this.notificationService.sendTopicFirebaseCloudMessaging({
-      title: 'Yêu cầu lớp học được tạo gần đây',
+      title: 'New class request created',
       body:
         classRequest.type === ClassRequestType.PUBLISH_CLASS
-          ? 'Yêu cầu mở lớp được tạo gần đây. Bấm để xem chi tiết.'
-          : 'Yêu cầu hủy lớp được tạo gần đây. Bấm để xem chi tiết',
+          ? 'A class publication request was recently created. Click to view details.'
+          : 'A class cancellation request was recently created. Click to view details.',
       receiverIds: staffIds,
       data: {
         type: FCMNotificationDataType.CLASS_REQUEST,

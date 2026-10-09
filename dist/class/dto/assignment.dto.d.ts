@@ -6,7 +6,7 @@ export declare class BaseAssignmentDto {
     attachments: BaseMediaDto[];
     deadline: Date;
 }
-declare const CreateAssignmentDto_base: import("@nestjs/common").Type<Pick<BaseAssignmentDto, "attachments" | "title" | "description">>;
+declare const CreateAssignmentDto_base: import("@nestjs/common").Type<Pick<BaseAssignmentDto, "description" | "title" | "attachments">>;
 export declare class CreateAssignmentDto extends CreateAssignmentDto_base {
 }
 export declare class UpdateAssignmentDto {

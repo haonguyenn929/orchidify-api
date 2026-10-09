@@ -328,7 +328,7 @@ export class ClassService implements IClassService {
     const MAX_VALUE = 9_007_199_254_740_991
     const MIN_VALUE = 1_000_000_000_000_000
     const orderCode = Math.floor(MIN_VALUE + Math.random() * (MAX_VALUE - MIN_VALUE))
-    const orderInfo = `Orchidify - Thanh toán đơn hàng #${orderCode}`
+    const orderInfo = `Orchidify - Payment for order #${orderCode}`
 
     // get discount and finalPrice
     const [course, learnerClasses] = await Promise.all([
@@ -644,8 +644,8 @@ export class ClassService implements IClassService {
 
     // send notification for instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: `Lớp học ${courseClass.code} đã hoàn thành`,
-      body: `Lớp học ${courseClass.code}: ${courseClass.title} đã hoàn thành. Số tiền đã được thanh toán vào số dư của bạn.`,
+      title: `Class ${courseClass.code} has completed`,
+      body: `Class ${courseClass.code}: ${courseClass.title} has completed. The payment has been added to your balance.`,
       receiverIds: [courseClass.instructorId.toString()],
       data: {
         type: FCMNotificationDataType.CLASS,
@@ -822,8 +822,8 @@ export class ClassService implements IClassService {
 
     // send notification for instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: `Lớp học ${courseClass.code} đã bị hủy`,
-      body: `Lớp học ${courseClass.code}: ${courseClass.title} đã bị hủy. Bấm để xem chi tiết`,
+      title: `Class ${courseClass.code} has been cancelled`,
+      body: `Class ${courseClass.code}: ${courseClass.title} has been cancelled. Click to view details.`,
       receiverIds: [courseClass.instructorId.toString()],
       data: {
         type: FCMNotificationDataType.CLASS,
@@ -860,7 +860,7 @@ export class ClassService implements IClassService {
       sendCancelClassEmailPromises.push(
         this.notificationService.sendMail({
           to: learner.email,
-          subject: `[Orchidify] Thông báo hủy lớp học`,
+          subject: `[Orchidify] Class Cancellation Notice`,
           template: 'learner/cancel-class',
           context: {
             name: learner.name,
@@ -873,8 +873,8 @@ export class ClassService implements IClassService {
     sendCancelClassEmailPromises.push(
       //  send notification for learners
       this.notificationService.sendFirebaseCloudMessaging({
-        title: `Lớp học bạn đăng ký đã bị hủy`,
-        body: `Lớp học ${courseClass.code}: ${courseClass.title} đã bị hủy. Bấm để xem chi tiết.`,
+        title: `The class you registered for has been cancelled`,
+        body: `Class ${courseClass.code}: ${courseClass.title} has been cancelled. Click to view details.`,
         receiverIds: refundTransactionLearnerIds.map((learnerId) => learnerId.toString()),
         data: {
           type: FCMNotificationDataType.CLASS,

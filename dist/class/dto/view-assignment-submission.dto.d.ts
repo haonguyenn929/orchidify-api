@@ -1,6 +1,6 @@
 import { BaseLearnerDto } from '@learner/dto/base.learner.dto';
 import { BaseAssignmentSubmissionDto } from './assignment-submission.dto';
-declare const SubmissionLearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "name" | "avatar" | "_id" | "email">>;
+declare const SubmissionLearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "_id" | "name" | "email" | "avatar">>;
 declare class SubmissionLearnerDetailResponse extends SubmissionLearnerDetailResponse_base {
 }
 declare class AssignmentSubmissionItemResponse {

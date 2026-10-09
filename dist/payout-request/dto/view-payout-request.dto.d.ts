@@ -32,7 +32,7 @@ export declare class QueryPayoutRequestDto {
     hasMadePayout: boolean;
     createdBy: string;
 }
-declare const InstructorViewPayoutRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BasePayoutRequestDto, "status" | "createdAt" | "description" | "updatedAt" | "_id" | "rejectReason" | "amount" | "createdBy" | "hasMadePayout">>;
+declare const InstructorViewPayoutRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BasePayoutRequestDto, "status" | "createdAt" | "updatedAt" | "_id" | "description" | "rejectReason" | "amount" | "createdBy" | "hasMadePayout">>;
 declare class InstructorViewPayoutRequestListItemResponse extends InstructorViewPayoutRequestListItemResponse_base {
 }
 declare const InstructorViewPayoutRequestListResponse_base: import("@nestjs/common").Type<{
@@ -55,7 +55,7 @@ declare const InstructorViewPayoutRequestListDataResponse_base: import("@nestjs/
 }>;
 export declare class InstructorViewPayoutRequestListDataResponse extends InstructorViewPayoutRequestListDataResponse_base {
 }
-declare const InstructorViewPayoutRequestDetailResponse_base: import("@nestjs/common").Type<Pick<BasePayoutRequestDto, "status" | "createdAt" | "description" | "updatedAt" | "_id" | "histories" | "rejectReason" | "handledBy" | "amount" | "transactionId" | "createdBy" | "hasMadePayout" | "transactionCode" | "attachment">>;
+declare const InstructorViewPayoutRequestDetailResponse_base: import("@nestjs/common").Type<Pick<BasePayoutRequestDto, "status" | "createdAt" | "updatedAt" | "_id" | "description" | "histories" | "rejectReason" | "handledBy" | "amount" | "transactionId" | "createdBy" | "hasMadePayout" | "transactionCode" | "attachment">>;
 declare class InstructorViewPayoutRequestDetailResponse extends InstructorViewPayoutRequestDetailResponse_base {
 }
 declare const InstructorViewPayoutRequestDetailDataResponse_base: import("@nestjs/common").Type<{
@@ -63,7 +63,7 @@ declare const InstructorViewPayoutRequestDetailDataResponse_base: import("@nestj
 }>;
 export declare class InstructorViewPayoutRequestDetailDataResponse extends InstructorViewPayoutRequestDetailDataResponse_base {
 }
-declare const StaffViewPayoutRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BasePayoutRequestDto, "status" | "createdAt" | "description" | "updatedAt" | "_id" | "rejectReason" | "amount" | "createdBy" | "hasMadePayout">>;
+declare const StaffViewPayoutRequestListItemResponse_base: import("@nestjs/common").Type<Pick<BasePayoutRequestDto, "status" | "createdAt" | "updatedAt" | "_id" | "description" | "rejectReason" | "amount" | "createdBy" | "hasMadePayout">>;
 declare class StaffViewPayoutRequestListItemResponse extends StaffViewPayoutRequestListItemResponse_base {
     createdBy: Types.ObjectId | BaseInstructorDto;
 }

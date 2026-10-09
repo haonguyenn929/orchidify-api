@@ -8,7 +8,7 @@ export declare class QueryTransactionDto {
     fromAmount: number;
     toAmount: number;
 }
-declare const TransactionListItemResponse_base: import("@nestjs/common").Type<Pick<BaseTransactionDto, "status" | "type" | "createdAt" | "description" | "updatedAt" | "_id" | "amount" | "paymentMethod" | "debitAccount" | "creditAccount">>;
+declare const TransactionListItemResponse_base: import("@nestjs/common").Type<Pick<BaseTransactionDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "amount" | "paymentMethod" | "debitAccount" | "creditAccount">>;
 declare class TransactionListItemResponse extends TransactionListItemResponse_base {
 }
 declare const TransactionListResponse_base: import("@nestjs/common").Type<{
@@ -31,7 +31,7 @@ declare const TransactionListDataResponse_base: import("@nestjs/common").Type<{
 }>;
 export declare class TransactionListDataResponse extends TransactionListDataResponse_base {
 }
-declare const TransactionDetailResponse_base: import("@nestjs/common").Type<Pick<BaseTransactionDto, "status" | "type" | "createdAt" | "description" | "updatedAt" | "_id" | "amount" | "paymentMethod" | "debitAccount" | "creditAccount" | "payment" | "payout">>;
+declare const TransactionDetailResponse_base: import("@nestjs/common").Type<Pick<BaseTransactionDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "amount" | "paymentMethod" | "debitAccount" | "creditAccount" | "payment" | "payout">>;
 declare class TransactionDetailResponse extends TransactionDetailResponse_base {
 }
 declare const TransactionDetailDataResponse_base: import("@nestjs/common").Type<{

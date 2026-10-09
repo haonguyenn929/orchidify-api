@@ -20,7 +20,7 @@ export declare class ClassGardenDetailResponse extends ClassGardenDetailResponse
 declare const ClassCourseDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "code">>;
 export declare class ClassCourseDetailResponse extends ClassCourseDetailResponse_base {
 }
-declare const InstructorViewClassListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "type" | "createdAt" | "title" | "thumbnail" | "updatedAt" | "_id" | "code" | "startDate" | "price" | "level" | "duration" | "learnerLimit" | "learnerQuantity" | "rate" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "progress">>;
+declare const InstructorViewClassListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "title" | "code" | "startDate" | "price" | "level" | "duration" | "thumbnail" | "learnerLimit" | "learnerQuantity" | "rate" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "progress">>;
 declare class InstructorViewClassListItemResponse extends InstructorViewClassListItemResponse_base {
     course: ClassCourseDetailResponse;
 }
@@ -44,7 +44,7 @@ declare const InstructorViewClassListDataResponse_base: import("@nestjs/common")
 }>;
 export declare class InstructorViewClassListDataResponse extends InstructorViewClassListDataResponse_base {
 }
-declare const InstructorViewClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "type" | "createdAt" | "title" | "description" | "thumbnail" | "updatedAt" | "_id" | "code" | "startDate" | "histories" | "media" | "price" | "level" | "duration" | "sessions" | "learnerLimit" | "learnerQuantity" | "rate" | "gardenRequiredToolkits" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "cancelReason" | "gardenId" | "progress">>;
+declare const InstructorViewClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "title" | "code" | "startDate" | "histories" | "media" | "price" | "level" | "duration" | "thumbnail" | "sessions" | "learnerLimit" | "learnerQuantity" | "rate" | "gardenRequiredToolkits" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "cancelReason" | "gardenId" | "progress">>;
 declare class InstructorViewClassDetailResponse extends InstructorViewClassDetailResponse_base {
     garden: ClassGardenDetailResponse;
     course: ClassCourseDetailResponse;
@@ -55,7 +55,7 @@ declare const InstructorViewClassDetailDataResponse_base: import("@nestjs/common
 }>;
 export declare class InstructorViewClassDetailDataResponse extends InstructorViewClassDetailDataResponse_base {
 }
-declare const StaffViewClassListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "type" | "createdAt" | "title" | "thumbnail" | "updatedAt" | "_id" | "code" | "startDate" | "price" | "level" | "duration" | "learnerLimit" | "learnerQuantity" | "rate" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "progress">>;
+declare const StaffViewClassListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "title" | "code" | "startDate" | "price" | "level" | "duration" | "thumbnail" | "learnerLimit" | "learnerQuantity" | "rate" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "progress">>;
 declare class StaffViewClassListItemResponse extends StaffViewClassListItemResponse_base {
     course: ClassCourseDetailResponse;
     instructor: ClassInstructorDetailResponse;
@@ -80,7 +80,7 @@ declare const StaffViewClassListDataResponse_base: import("@nestjs/common").Type
 }>;
 export declare class StaffViewClassListDataResponse extends StaffViewClassListDataResponse_base {
 }
-declare const StaffViewClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "type" | "createdAt" | "title" | "description" | "thumbnail" | "updatedAt" | "_id" | "code" | "startDate" | "histories" | "media" | "price" | "level" | "duration" | "sessions" | "learnerLimit" | "learnerQuantity" | "rate" | "gardenRequiredToolkits" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "cancelReason" | "gardenId" | "progress">>;
+declare const StaffViewClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "title" | "code" | "startDate" | "histories" | "media" | "price" | "level" | "duration" | "thumbnail" | "sessions" | "learnerLimit" | "learnerQuantity" | "rate" | "gardenRequiredToolkits" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "cancelReason" | "gardenId" | "progress">>;
 declare class StaffViewClassDetailResponse extends StaffViewClassDetailResponse_base {
     garden: ClassGardenDetailResponse;
     instructor: ClassInstructorDetailResponse;
@@ -92,7 +92,7 @@ declare const StaffViewClassDetailDataResponse_base: import("@nestjs/common").Ty
 }>;
 export declare class StaffViewClassDetailDataResponse extends StaffViewClassDetailDataResponse_base {
 }
-declare const GardenManagerViewClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "title" | "_id" | "code" | "gardenRequiredToolkits" | "instructorId" | "courseId">>;
+declare const GardenManagerViewClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "_id" | "title" | "code" | "gardenRequiredToolkits" | "instructorId" | "courseId">>;
 declare class GardenManagerViewClassDetailResponse extends GardenManagerViewClassDetailResponse_base {
     instructor: ClassInstructorDetailResponse;
     course: ClassCourseDetailResponse;
@@ -102,7 +102,7 @@ declare const GardenManagerViewClassDetailDataResponse_base: import("@nestjs/com
 }>;
 export declare class GardenManagerViewClassDetailDataResponse extends GardenManagerViewClassDetailDataResponse_base {
 }
-declare const LearnerViewMyClassListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "type" | "title" | "thumbnail" | "_id" | "code" | "price" | "level" | "progress">>;
+declare const LearnerViewMyClassListItemResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "_id" | "type" | "title" | "code" | "price" | "level" | "thumbnail" | "progress">>;
 declare class LearnerViewMyClassListItemResponse extends LearnerViewMyClassListItemResponse_base {
     instructor: ClassInstructorDetailResponse;
 }
@@ -126,10 +126,10 @@ declare const LearnerViewMyClassListDataResponse_base: import("@nestjs/common").
 }>;
 export declare class LearnerViewMyClassListDataResponse extends LearnerViewMyClassListDataResponse_base {
 }
-declare const MyClassInstructorDetailResponse_base: import("@nestjs/common").Type<Pick<BaseInstructorDto, "name" | "avatar" | "_id" | "bio" | "idCardPhoto">>;
+declare const MyClassInstructorDetailResponse_base: import("@nestjs/common").Type<Pick<BaseInstructorDto, "_id" | "name" | "avatar" | "bio" | "idCardPhoto">>;
 declare class MyClassInstructorDetailResponse extends MyClassInstructorDetailResponse_base {
 }
-declare const LearnerViewMyClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "type" | "createdAt" | "title" | "description" | "thumbnail" | "updatedAt" | "_id" | "code" | "startDate" | "histories" | "media" | "price" | "level" | "duration" | "sessions" | "learnerLimit" | "learnerQuantity" | "rate" | "gardenRequiredToolkits" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "cancelReason" | "gardenId" | "progress">>;
+declare const LearnerViewMyClassDetailResponse_base: import("@nestjs/common").Type<Pick<BaseClassDto, "status" | "createdAt" | "updatedAt" | "_id" | "type" | "description" | "title" | "code" | "startDate" | "histories" | "media" | "price" | "level" | "duration" | "thumbnail" | "sessions" | "learnerLimit" | "learnerQuantity" | "rate" | "gardenRequiredToolkits" | "instructorId" | "ratingSummary" | "courseId" | "weekdays" | "slotNumbers" | "cancelReason" | "gardenId" | "progress">>;
 declare class LearnerViewMyClassDetailResponse extends LearnerViewMyClassDetailResponse_base {
     garden: ClassGardenDetailResponse;
     instructor: MyClassInstructorDetailResponse;

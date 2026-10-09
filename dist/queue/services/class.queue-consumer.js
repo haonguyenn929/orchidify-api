@@ -327,8 +327,8 @@ let ClassQueueConsumer = ClassQueueConsumer_1 = class ClassQueueConsumer extends
             $set: { hasSentCertificate: true }
         });
         this.notificationService.sendFirebaseCloudMessaging({
-            title: `Chúc mừng đã hoàn thành khóa học`,
-            body: `Lớp học ${courseClass.code}: ${courseClass.title} đã kết thúc. Bấm để xem chi tiết.`,
+            title: `Congratulations on completing the course`,
+            body: `Class ${courseClass.code}: ${courseClass.title} has ended. Click to view details.`,
             receiverIds: learnerClasses.map((learnerClass) => learnerClass.learnerId.toString()),
             data: {
                 type: constant_4.FCMNotificationDataType.CLASS,
@@ -409,8 +409,8 @@ let ClassQueueConsumer = ClassQueueConsumer_1 = class ClassQueueConsumer extends
         if (learnerClasses.length === 0)
             return;
         await this.notificationService.sendFirebaseCloudMessaging({
-            title: `Buổi học sẽ bắt đầu sau 1 tiếng`,
-            body: `Lớp ${courseClass.code}: ${courseClass.title} sắp bắt đầu buổi học. Bấm để xem chi tiết.`,
+            title: `Session will start in 1 hour`,
+            body: `Class ${courseClass.code}: ${courseClass.title} session is about to start. Click to view details.`,
             receiverIds: learnerClasses.map((learnerClass) => learnerClass?.learnerId?.toString()),
             data: {
                 type: constant_4.FCMNotificationDataType.CLASS,
@@ -455,8 +455,8 @@ let ClassQueueConsumer = ClassQueueConsumer_1 = class ClassQueueConsumer extends
         if (receiverIds.length === 0)
             return;
         await this.notificationService.sendFirebaseCloudMessaging({
-            title: `Lớp học sẽ bắt đầu vào ngày mai`,
-            body: `Lớp ${courseClass.code}: ${courseClass.title} sẽ bắt đầu vào ngày mai. Bấm để xem chi tiết.`,
+            title: `Class will start tomorrow`,
+            body: `Class ${courseClass.code}: ${courseClass.title} will start tomorrow. Click to view details.`,
             receiverIds,
             data: {
                 type: constant_4.FCMNotificationDataType.CLASS,

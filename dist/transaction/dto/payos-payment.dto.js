@@ -115,7 +115,7 @@ class TransactionType {
 exports.TransactionType = TransactionType;
 __decorate([
     (0, swagger_1.ApiProperty)({
-        description: 'Mã tham chiếu của giao dịch'
+        description: 'Transaction reference code'
     }),
     __metadata("design:type", String)
 ], TransactionType.prototype, "reference", void 0);

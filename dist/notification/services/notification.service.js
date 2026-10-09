@@ -31,14 +31,8 @@ let NotificationService = NotificationService_1 = class NotificationService {
         this.userDeviceService = userDeviceService;
         this.appLogger = new app_logger_service_1.AppLogger(NotificationService_1.name);
     }
-    async sendMail(options) {
-        try {
-            this.appLogger.log(`[sendMail] [success] data= ${JSON.stringify(options)}`);
-            await this.mailService.sendMail(options);
-        }
-        catch (error) {
-            this.appLogger.error(`[sendMail] [failed] error = ${JSON.stringify(error.message)}`);
-        }
+    async sendMail(_options) {
+        return;
     }
     async sendFirebaseCloudMessaging(sendNotificationDto) {
         this.appLogger.debug(`[sendFirebaseCloudMessaging]: sendNotificationDto=${JSON.stringify(sendNotificationDto)}`);

@@ -179,7 +179,7 @@ export class StripePaymentStrategy implements IPaymentStrategy, OnModuleInit {
       ])
       this.notificationService.sendMail({
         to: learner?.email,
-        subject: `[Orchidify] Xác nhận đăng ký lớp học ${courseClass?.title} thành công`,
+        subject: `[Orchidify] Successfully registered for class ${courseClass?.title}`,
         template: 'learner/enroll-class',
         context: {
           classTitle: courseClass?.title,
@@ -395,8 +395,8 @@ export class StripePaymentStrategy implements IPaymentStrategy, OnModuleInit {
 
     // 5. Send notification to learner
     this.notificationService.sendFirebaseCloudMessaging({
-      title: `Bạn đã đăng ký lớp học thành công`,
-      body: `Chào mừng bạn đến với lớp học ${courseClass.code}: ${courseClass.title}.`,
+      title: `Class registration successful`,
+      body: `Welcome to class ${courseClass.code}: ${courseClass.title}.`,
       receiverIds: [learnerId],
       data: {
         type: FCMNotificationDataType.CLASS,
@@ -406,8 +406,8 @@ export class StripePaymentStrategy implements IPaymentStrategy, OnModuleInit {
 
     // 6. Send notification for instructor
     this.notificationService.sendFirebaseCloudMessaging({
-      title: `Học viên đã đăng ký lớp học thành công`,
-      body: `Lớp học ${courseClass.code}: ${courseClass.title} có học viên mới.`,
+      title: `A learner has enrolled in your class`,
+      body: `Class ${courseClass.code}: ${courseClass.title} has a new learner.`,
       receiverIds: [courseClass.instructorId.toString()],
       data: {
         type: FCMNotificationDataType.CLASS,

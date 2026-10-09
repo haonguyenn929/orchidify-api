@@ -6,7 +6,7 @@ export declare class QueryInstructorTimesheetDto {
     readonly type: TimesheetType;
     readonly instructorId: string;
 }
-declare const QueryTeachingTimesheetDto_base: import("@nestjs/common").Type<Pick<QueryInstructorTimesheetDto, "type" | "date">>;
+declare const QueryTeachingTimesheetDto_base: import("@nestjs/common").Type<Pick<QueryInstructorTimesheetDto, "date" | "type">>;
 export declare class QueryTeachingTimesheetDto extends QueryTeachingTimesheetDto_base {
     instructorId: string;
 }

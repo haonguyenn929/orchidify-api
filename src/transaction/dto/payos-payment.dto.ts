@@ -66,7 +66,7 @@ export class PayOSPaymentResponseDto {
 
 export class TransactionType {
   @ApiProperty({
-    description: 'Mã tham chiếu của giao dịch'
+    description: 'Transaction reference code'
   })
   reference: string
   @ApiProperty()

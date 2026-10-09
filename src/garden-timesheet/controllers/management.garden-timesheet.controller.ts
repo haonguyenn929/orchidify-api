@@ -104,8 +104,8 @@ export class ManagementGardenTimesheetController {
     // Send notification to garden manager
     const garden = await this.gardenService.findById(gardenId.toString())
     this.notificationService.sendFirebaseCloudMessaging({
-      title: `Lịch vườn ${garden.name} đã được cập nhật`,
-      body: `Lịch vườn ${garden.name} đã được cập nhật. Bấm để xem chi tiết.`,
+      title: `Garden schedule for ${garden.name} has been updated`,
+      body: `Garden schedule for ${garden.name} has been updated. Click to view details.`,
       receiverIds: [garden.gardenManagerId.toString()],
       data: {
         type: FCMNotificationDataType.GARDEN_TIMESHEET,

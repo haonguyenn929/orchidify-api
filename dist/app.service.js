@@ -21,7 +21,7 @@ let AppService = class AppService {
     }
     getI18nText() {
         return this.i18nService.t('auth.welcome', {
-            lang: 'vn'
+            lang: 'en'
         });
     }
 };

@@ -30,7 +30,7 @@ export declare class QueryFeedbackDto {
     rate: number;
     courseId: Types.ObjectId;
 }
-declare const FeedbackLearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "name" | "avatar" | "_id" | "email" | "dateOfBirth" | "phone">>;
+declare const FeedbackLearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "_id" | "name" | "email" | "avatar" | "dateOfBirth" | "phone">>;
 declare class FeedbackLearnerDetailResponse extends FeedbackLearnerDetailResponse_base {
 }
 declare const FeedbackDetailResponse_base: import("@nestjs/common").Type<Pick<BaseFeedbackDto, "createdAt" | "updatedAt" | "_id" | "comment" | "rate" | "classId" | "learnerId">>;

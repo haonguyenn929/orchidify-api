@@ -30,7 +30,7 @@ import { BaseSlotDto } from '@garden-timesheet/dto/slot.dto';
 export declare class QueryAttendanceDto {
     slotId: Types.ObjectId;
 }
-declare const AttendanceLearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "name" | "avatar" | "_id">>;
+declare const AttendanceLearnerDetailResponse_base: import("@nestjs/common").Type<Pick<BaseLearnerDto, "_id" | "name" | "avatar">>;
 declare class AttendanceLearnerDetailResponse extends AttendanceLearnerDetailResponse_base {
 }
 declare const AttendanceListItemResponse_base: import("@nestjs/common").Type<Pick<BaseAttendanceDto, "status" | "createdAt" | "updatedAt" | "_id" | "note" | "learnerId">>;

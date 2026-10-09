@@ -5,7 +5,7 @@ export declare class QueryStaffDto {
     email: string;
     status: StaffStatus[];
 }
-declare const StaffDetailResponse_base: import("@nestjs/common").Type<Pick<BaseStaffDto, "status" | "name" | "createdAt" | "updatedAt" | "_id" | "email" | "role" | "idCardPhoto" | "staffCode">>;
+declare const StaffDetailResponse_base: import("@nestjs/common").Type<Pick<BaseStaffDto, "status" | "createdAt" | "updatedAt" | "_id" | "name" | "email" | "role" | "idCardPhoto" | "staffCode">>;
 declare class StaffDetailResponse extends StaffDetailResponse_base {
 }
 declare const StaffListResponse_base: import("@nestjs/common").Type<{
